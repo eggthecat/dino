@@ -5,13 +5,20 @@
     <title>dino</title>
   </head>
   <body>
-    <div class="container">
-      <label for="team">Choose how many teams</label>
-      <input id="team" type="number" value="team" min="2">
-      <label for="member">Choose how many team members on each team</label>
-      <input id="member" type="number" value="member" min="1">
-      <button type="click" name="button"></button>
+    <form class="input">
+      <div class="container">
+        <label for="teamIn">Choose how many teams</label>
+        <input id="teamIn" placeholder="team" min="2">
+        <label for="memberIn">Choose how many team members on each team</label>
+        <input id="memberIn" placeholder="member" min="1">
+        <button  id="duel" type="button" name="button">submit</button>
+      </div>
+    </form>
+    <div class="teams">
+
     </div>
-    <p id="result"></p>
+  <div class="winner">
+
+  </div>
   </body>
 </html>
