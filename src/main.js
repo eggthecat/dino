@@ -23,6 +23,7 @@ $(document).ready(function() {
         const response = JSON.parse(this.responseText);
         getElements(response);
         console.log(response[0]);
+        console.log(response.sort());
       }
     }
 
@@ -31,10 +32,9 @@ $(document).ready(function() {
 
    const getElements = function(response) {
 
-      console.log(response[0].join("").length);
-      console.log(response[1].join("").length);
-      console.log(response[2].join("").length);
-      console
+      // console.log(response[0].join("").length);
+      // console.log(response[1].join("").length);
+      // console.log(response[2].join("").length);
       createHTML(response);
       sortArray(response);
 
