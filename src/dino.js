@@ -7,23 +7,50 @@ export let createHTML = function(array){
 }
 
 
-export let sortArray = function(array){
+// export let sortArray = function(array){
   // console.log(array)
   //   let buddy = array.sort();
   //   console.log(buddy);
   //   return buddy;
   //   console.log(array.sort());
   // console.log(buddy);
-  var winner = []
-  for (var i=0; i<array.length; i++){
-    if (array[i].join("").length > array[i+1].join("").length){
-      winner.push(array[i])
-    } else {
-      winner.push(array[i+1])
-      console.log(winner)
+  export function array(response){
+    console.log(response[0])
+
+  let highestLength = response[0].join("").length;
+  let winner = "";
+  console.log("higest length before loop =", highestLength);
+
+  //var for current highest
+  //value of current highest
+  for (var i=0; i<response.length; i++){
+    //capture current length
+    let currentLength = response[i].join("").length;
+    //if current length is longer than highest
+    if (currentLength >= highestLength) {
+      //set new highest
+      highestLength = currentLength;
+      //record which team has new highest
+      winner = `team${i+1}`;
     }
-    console.log(winner)
   }
+  console.log(winner);
+
+  //   console.log(response[i])
+  //
+  //   let currentLength = response[i].join("").length;
+  //   console.log(currentLength);
+  //
+  //   if (response.join("").length[0] > response.join("").length[i+1]){
+  //     winner.push(response[i].name)
+  //   } else {
+  //
+  //     winner.push(response[i+1])
+  //
+  //     console.log(winner[0])
+  //   }
+  //
+  // }
   // for (var i = 0; i < array.length; i++) {
   //   for (var j = 0; j < array[i].length; j++) {
   //     if (array[i].join("").length > array[i+1].join("").length) {
