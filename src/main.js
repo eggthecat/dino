@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import {createHTML} from "./dino.js"
-import {sortArray} from "./dino.js"
+import {array} from "./dino.js"
 // UI LOGIC BEGIN
 $(document).ready(function() {
   $('#duel').click(function(event) {
@@ -36,7 +36,8 @@ $(document).ready(function() {
       // console.log(response[1].join("").length);
       // console.log(response[2].join("").length);
       createHTML(response);
-      sortArray(response);
+      array(response);
+      console.log(response)
 
 
     }
